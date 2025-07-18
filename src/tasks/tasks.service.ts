@@ -1,9 +1,21 @@
 import { Injectable } from '@nestjs/common';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
+import { Task } from './tasks.model';
 
 @Injectable()
 export class TasksService {
+  private tasks: Task[] = [];
+
+  getAllTasks(): Task[]{
+    return this.tasks;
+  }
+  createTasks(title: string, description: string): Task[]{
+    const task: Task = {
+      
+
+  }
+}
   create(createTaskDto: CreateTaskDto) {
     return 'This action adds a new task';
   }
